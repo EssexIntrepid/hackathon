@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables - LearnJavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>📘 LearnJavaScript</h2>
+                <p>Master JS from Scratch</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="intro.html">Introduction</a></li>
+                <li><a href="variables.html">Variables</a></li>
+                <li><a href="datatypes.html">Data Types</a></li>
+                <li><a href="functions.html">Functions</a></li>
+                <li><a href="conditionals.html">Conditionals</a></li>
+                <li><a href="loops.html">Loops</a></li>
+                <li><a href="booleans.html">Boolean Logic</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="top-bar">
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+                <button class="theme-toggle" id="themeToggle">Dark/Light</button>
+            </div>
+
+            <div class="content-card">
+                <h1>Variables in JavaScript</h1>
+                <p>Variables are containers for storing data values. Think of them as labeled boxes where you can keep information to use later in your code.[reference:1]</p>
+
+                <h2>Declaring Variables</h2>
+                <p>In JavaScript, there are three ways to declare a variable:</p>
+                <ul>
+                    <li><code class="inline-code">let</code> - For values that can change (recommended for most cases)</li>
+                    <li><code class="inline-code">const</code> - For values that never change (constants)</li>
+                    <li><code class="inline-code">var</code> - The old way (avoid in modern JavaScript)</li>
+                </ul>
+
+                <pre><code>// Variable declarations
+let name = "John";      // String variable
+const PI = 3.14159;     // Constant (cannot be changed)
+let age = 25;           // Number variable
+let isStudent = true;   // Boolean variable</code></pre>
+
+                <h2>Variable Naming Rules</h2>
+                <ul>
+                    <li>Names can contain letters, digits, underscores, and dollar signs</li>
+                    <li>Names must begin with a letter, $, or _</li>
+                    <li>Names are case-sensitive (myVar and myvar are different)</li>
+                    <li>Use camelCase for multi-word names: <code class="inline-code">firstName</code>, <code class="inline-code">myAge</code></li>
+                </ul>
+
+                <h2>Try It Yourself</h2>
+                <p>Create your own variables and see them in action!</p>
+
+                <div class="editor-container">
+                    <div class="editor-header">
+                        <span>Try it yourself!</span>
+                        <button class="run-btn" onclick="runCode('editor1', 'output1')">▶ Run Code</button>
+                    </div>
+                    <textarea id="editor1" class="editor-textarea" placeholder="Write JavaScript code here...">// Create some variables
+let myName = "Your Name";
+let myAge = 25;
+let myCity = "Your City";
+
+// Display them
+console.log("Hello! My name is " + myName);
+console.log("I am " + myAge + " years old");
+console.log("I live in " + myCity);</textarea>
+                    <div class="output-area">
+                        <div class="output-label">Output:</div>
+                        <div id="output1" class="output-content"></div>
+                    </div>
+                </div>
+
+                <p><strong>Try this:</strong> Change the values of the variables and run the code again!</p>
+
+                <div style="margin-top: 30px; display: flex; justify-content: space-between;">
+                    <a href="intro.html" class="btn">← Previous Lesson</a>
+                    <a href="datatypes.html" class="btn">Next Lesson: Data Types →</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

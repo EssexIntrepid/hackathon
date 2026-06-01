@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to JavaScript - LearnJavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>📘 LearnJavaScript</h2>
+                <p>Master JS from Scratch</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="intro.html" class="active">📖 Introduction</a></li>
+                <li><a href="variables.html">📦 Variables</a></li>
+                <li><a href="datatypes.html">🔢 Data Types</a></li>
+                <li><a href="functions.html">⚙️ Functions</a></li>
+                <li><a href="conditionals.html">🔀 Conditionals</a></li>
+                <li><a href="loops.html">🔄 Loops</a></li>
+                <li><a href="booleans.html">✅ Boolean Logic</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="top-bar">
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+                <button class="theme-toggle" id="themeToggle">🌓 Dark/Light</button>
+            </div>
+
+            <div class="content-card">
+                <h1>📖 Introduction to JavaScript</h1>
+                <p>JavaScript is a powerful programming language that makes websites interactive. It's one of the core technologies of the web, alongside HTML and CSS.</p>
+
+                <h2>What is JavaScript?</h2>
+                <p>JavaScript allows you to add dynamic behavior to web pages. With JavaScript, you can:</p>
+                <ul>
+                    <li>Respond to user clicks, hovers, and keyboard input</li>
+                    <li>Change content and styles dynamically</li>
+                    <li>Create animations and interactive features</li>
+                    <li>Build entire web applications</li>
+                </ul>
+
+                <h2>Your First JavaScript</h2>
+                <p>Let's write our first JavaScript code! The <code class="inline-code">alert()</code> function displays a popup message to the user.[reference:0]</p>
+
+                <div class="editor-container">
+                    <div class="editor-header">
+                        <span>📝 Try it yourself!</span>
+                        <button class="run-btn" onclick="runCode('editor1', 'output1')">▶ Run Code</button>
+                    </div>
+                    <textarea id="editor1" class="editor-textarea" placeholder="Write JavaScript code here...">alert("Hello, World!");</textarea>
+                    <div class="output-area">
+                        <div class="output-label">📤 Output:</div>
+                        <div id="output1" class="output-content"></div>
+                    </div>
+                </div>
+
+                <p>Try modifying the message inside the quotes and click "Run Code" to see the result!</p>
+
+                <h2>Where to Place JavaScript</h2>
+                <p>JavaScript can be placed in three locations:</p>
+                <ol>
+                    <li><strong>Inline</strong> - Inside HTML elements</li>
+                    <li><strong>Internal</strong> - Inside <code class="inline-code">&lt;script&gt;</code> tags in the HTML file</li>
+                    <li><strong>External</strong> - In a separate .js file linked to your HTML</li>
+                </ol>
+
+                <div style="margin-top: 30px; text-align: center;">
+                    <a href="variables.html" class="btn">Next Lesson: Variables →</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

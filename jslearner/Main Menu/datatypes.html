@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types - LearnJavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>LearnJavaScript</h2>
+                <p>Master JS from Scratch</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="intro.html">Introduction</a></li>
+                <li><a href="variables.html">Variables</a></li>
+                <li><a href="datatypes.html">Data Types</a></li>
+                <li><a href="functions.html">Functions</a></li>
+                <li><a href="conditionals.html">Conditionals</a></li>
+                <li><a href="loops.html">Loops</a></li>
+                <li><a href="booleans.html">Boolean Logic</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="top-bar">
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+                <button class="theme-toggle" id="themeToggle">Dark/Light</button>
+            </div>
+
+            <div class="content-card">
+                <h1>JavaScript Data Types</h1>
+                <p>JavaScript is a dynamically typed language, meaning variables can hold different types of values. There are 8 basic data types in JavaScript.[reference:2]</p>
+
+                <h2>Primitive Data Types</h2>
+
+                <h3>String</h3>
+                <p>Text values enclosed in quotes (single or double):</p>
+                <pre><code>let greeting = "Hello, World!";
+let name = 'John Doe';</code></pre>
+
+                <h3>Number</h3>
+                <p>Both integers and floating-point numbers:</p>
+                <pre><code>let age = 25;
+let price = 19.99;
+let negative = -10;</code></pre>
+
+                <h3>Boolean</h3>
+                <p>Only two values: <code class="inline-code">true</code> or <code class="inline-code">false</code>:</p>
+                <pre><code>let isLoggedIn = true;
+let isComplete = false;</code></pre>
+
+                <h3>Undefined</h3>
+                <p>A variable that has been declared but not assigned a value:</p>
+                <pre><code>let something;
+console.log(something); // undefined</code></pre>
+
+                <h3>Null</h3>
+                <p>Represents "nothing", "empty", or "value unknown":</p>
+                <pre><code>let emptyValue = null;</code></pre>
+
+                <h2>The typeof Operator</h2>
+                <p>Use <code class="inline-code">typeof</code> to check the data type of a variable. It returns a string indicating the type.[reference:3]</p>
+
+                <div class="editor-container">
+                    <div class="editor-header">
+                        <span>Try it yourself!</span>
+                        <button class="run-btn" onclick="runCode('editor1', 'output1')">▶ Run Code</button>
+                    </div>
+                    <textarea id="editor1" class="editor-textarea" placeholder="Write JavaScript code here...">// Try different data types
+let myString = "Hello";
+let myNumber = 42;
+let myBoolean = true;
+let myUndefined;
+let myNull = null;
+
+console.log("String: " + typeof myString);
+console.log("Number: " + typeof myNumber);
+console.log("Boolean: " + typeof myBoolean);
+console.log("Undefined: " + typeof myUndefined);
+console.log("Null: " + typeof myNull);</textarea>
+                    <div class="output-area">
+                        <div class="output-label">Output:</div>
+                        <div id="output1" class="output-content"></div>
+                    </div>
+                </div>
+
+                <p><strong>Fun fact:</strong> <code class="inline-code">typeof null</code> returns "object" - this is a well-known bug in JavaScript that has never been fixed!</p>
+
+                <div style="margin-top: 30px; display: flex; justify-content: space-between;">
+                    <a href="variables.html" class="btn">← Previous Lesson</a>
+                    <a href="functions.html" class="btn">Next Lesson: Functions →</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

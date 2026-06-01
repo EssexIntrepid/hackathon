@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditionals - LearnJavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>📘 LearnJavaScript</h2>
+                <p>Master JS from Scratch</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="intro.html">Introduction</a></li>
+                <li><a href="variables.html">Variables</a></li>
+                <li><a href="datatypes.html">Data Types</a></li>
+                <li><a href="functions.html">Functions</a></li>
+                <li><a href="conditionals.html">Conditionals</a></li>
+                <li><a href="loops.html">Loops</a></li>
+                <li><a href="booleans.html">Boolean Logic</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="top-bar">
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+                <button class="theme-toggle" id="themeToggle">Dark/Light</button>
+            </div>
+
+            <div class="content-card">
+                <h1>Conditional Statements</h1>
+                <p>Conditional statements allow your code to make decisions and execute different blocks of code based on whether a condition is true or false.[reference:5]</p>
+
+                <h2>The if Statement</h2>
+                <p>The <code class="inline-code">if</code> statement executes a block of code if a condition is true:</p>
+                <pre><code>let age = 18;
+
+if (age >= 18) {
+    console.log("You are eligible to vote!");
+}</code></pre>
+
+                <h2>The else Statement</h2>
+                <p>Use <code class="inline-code">else</code> to execute code when the condition is false:</p>
+                <pre><code>let temperature = 25;
+
+if (temperature > 30) {
+    console.log("It's hot outside!");
+} else {
+    console.log("It's comfortable outside!");
+}</code></pre>
+
+                <h2>The else if Statement</h2>
+                <p>Chain multiple conditions together:</p>
+                <pre><code>let score = 85;
+
+if (score >= 90) {
+    console.log("Grade: A");
+} else if (score >= 80) {
+    console.log("Grade: B");
+} else if (score >= 70) {
+    console.log("Grade: C");
+} else {
+    console.log("Grade: F");
+}</code></pre>
+
+                <h2>Try It Yourself</h2>
+                <p>Create a program that gives different messages based on the time of day!</p>
+
+                <div class="editor-container">
+                    <div class="editor-header">
+                        <span>Try it yourself!</span>
+                        <button class="run-btn" onclick="runCode('editor1', 'output1')">▶ Run Code</button>
+                    </div>
+                    <textarea id="editor1" class="editor-textarea" placeholder="Write JavaScript code here...">let hour = 14; // 24-hour format (0-23)
+
+if (hour < 12) {
+    console.log("Good morning!");
+} else if (hour < 18) {
+    console.log("Good afternoon!");
+} else {
+    console.log("Good evening!");
+}
+
+// Add a special message
+if (hour >= 22 || hour < 5) {
+    console.log("You should be sleeping!");
+}</textarea>
+                    <div class="output-area">
+                        <div class="output-label">Output:</div>
+                        <div id="output1" class="output-content"></div>
+                    </div>
+                </div>
+
+                <p><strong>Try this:</strong> Change the <code class="inline-code">hour</code> variable to different values (0-23) to see different greetings!</p>
+
+                <div style="margin-top: 30px; display: flex; justify-content: space-between;">
+                    <a href="functions.html" class="btn">← Previous Lesson</a>
+                    <a href="loops.html" class="btn">Next Lesson: Loops →</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
