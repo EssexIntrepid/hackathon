@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean Logic - LearnJavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>LearnJavaScript</h2>
+                <p>Master JS from Scratch</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="intro.html">Introduction</a></li>
+                <li><a href="variables.html">Variables</a></li>
+                <li><a href="datatypes.html">Data Types</a></li>
+                <li><a href="functions.html">Functions</a></li>
+                <li><a href="conditionals.html">Conditionals</a></li>
+                <li><a href="loops.html">Loops</a></li>
+                <li><a href="booleans.html">Boolean Logic</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="top-bar">
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+                <button class="theme-toggle" id="themeToggle">Dark/Light</button>
+            </div>
+
+            <div class="content-card">
+                <h1>Boolean Logic</h1>
+                <p>Boolean values represent one of two states: <code class="inline-code">true</code> or <code class="inline-code">false</code>. They're the foundation of decision-making in programming.[reference:7]</p>
+
+                <h2>Comparison Operators</h2>
+                <p>These operators compare values and return boolean results:</p>
+                <ul>
+                    <li><code class="inline-code">==</code> - Equal to (checks value only)</li>
+                    <li><code class="inline-code">===</code> - Strictly equal to (checks value AND type)</li>
+                    <li><code class="inline-code">!=</code> - Not equal to</li>
+                    <li><code class="inline-code">!==</code> - Strictly not equal to</li>
+                    <li><code class="inline-code">&gt;</code> - Greater than</li>
+                    <li><code class="inline-code">&lt;</code> - Less than</li>
+                    <li><code class="inline-code">&gt;=</code> - Greater than or equal to</li>
+                    <li><code class="inline-code">&lt;=</code> - Less than or equal to</li>
+                </ul>
+
+                <h2>Logical Operators</h2>
+                <p>Combine multiple boolean expressions:</p>
+                <ul>
+                    <li><code class="inline-code">&&</code> - AND (true only if BOTH are true)</li>
+                    <li><code class="inline-code">||</code> - OR (true if AT LEAST ONE is true)</li>
+                    <li><code class="inline-code">!</code> - NOT (reverses the boolean value)</li>
+                </ul>
+
+                <h2>Examples</h2>
+                <pre><code>let x = 10;
+let y = 5;
+
+console.log(x > y);      // true
+console.log(x === 10);    // true
+console.log(x === "10");  // false (different types)
+
+let isRaining = true;
+let hasUmbrella = false;
+
+console.log(isRaining && hasUmbrella);  // false
+console.log(isRaining || hasUmbrella);  // true
+console.log(!isRaining);                 // false</code></pre>
+
+                <h2>Try It Yourself</h2>
+                <p>Experiment with boolean expressions!</p>
+
+                <div class="editor-container">
+                    <div class="editor-header">
+                        <span>Try it yourself!</span>
+                        <button class="run-btn" onclick="runCode('editor1', 'output1')">▶ Run Code</button>
+                    </div>
+                    <textarea id="editor1" class="editor-textarea" placeholder="Write JavaScript code here...">let age = 20;
+let hasLicense = true;
+
+// Check if someone can drive
+let canDrive = age >= 16 && hasLicense;
+console.log("Can drive? " + canDrive);
+
+// Check if someone is a teenager or senior
+let isTeenager = age >= 13 && age <= 19;
+let isSenior = age >= 65;
+let needsDiscount = isTeenager || isSenior;
+console.log("Qualifies for discount? " + needsDiscount);
+
+// Check if age is NOT between 18 and 65
+let isNotWorkingAge = !(age >= 18 && age <= 65);
+console.log("Not of working age? " + isNotWorkingAge);</textarea>
+                    <div class="output-area">
+                        <div class="output-label">Output:</div>
+                        <div id="output1" class="output-content"></div>
+                    </div>
+                </div>
+
+                <p><strong>Try this:</strong> Change the <code class="inline-code">age</code> and <code class="inline-code">hasLicense</code> values to see how the results change!</p>
+
+                <div style="margin-top: 30px;">
+                    <a href="loops.html" class="btn">← Previous Lesson</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

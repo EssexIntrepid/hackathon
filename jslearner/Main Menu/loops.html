@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops - LearnJavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>LearnJavaScript</h2>
+                <p>Master JS from Scratch</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="intro.html">Introduction</a></li>
+                <li><a href="variables.html">Variables</a></li>
+                <li><a href="datatypes.html">Data Types</a></li>
+                <li><a href="functions.html">Functions</a></li>
+                <li><a href="conditionals.html">Conditionals</a></li>
+                <li><a href="loops.html" class="active">Loops</a></li>
+                <li><a href="booleans.html">Boolean Logic</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="top-bar">
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+                <button class="theme-toggle" id="themeToggle">Dark/Light</button>
+            </div>
+
+            <div class="content-card">
+                <h1>Loops in JavaScript</h1>
+                <p>Loops allow you to execute a block of code multiple times. They're perfect for repeating tasks or working with lists of data.[reference:6]</p>
+
+                <h2>The for Loop</h2>
+                <p>The most common loop. It has three parts: initialization, condition, and increment:</p>
+                <pre><code>for (let i = 0; i < 5; i++) {
+    console.log("Count: " + i);
+}
+// Output: Count: 0, Count: 1, Count: 2, Count: 3, Count: 4</code></pre>
+
+                <h2>The while Loop</h2>
+                <p>Continues as long as a condition is true:</p>
+                <pre><code>let count = 0;
+while (count < 3) {
+    console.log("Number: " + count);
+    count++;
+}</code></pre>
+
+                <h2>Looping Through Arrays</h2>
+                <p>Loops are great for working with arrays (lists of items):</p>
+                <pre><code>let fruits = ["Apple", "Banana", "Orange", "Mango"];
+
+for (let i = 0; i < fruits.length; i++) {
+    console.log("I like " + fruits[i]);
+}</code></pre>
+
+                <h2>Try It Yourself</h2>
+                <p>Create your own loop to display numbers or items!</p>
+
+                <div class="editor-container">
+                    <div class="editor-header">
+                        <span>Try it yourself!</span>
+                        <button class="run-btn" onclick="runCode('editor1', 'output1')">▶ Run Code</button>
+                    </div>
+                    <textarea id="editor1" class="editor-textarea" placeholder="Write JavaScript code here...">// Count from 1 to 10
+console.log("Counting from 1 to 10:");
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
+}
+
+// Loop through an array
+let colors = ["Red", "Green", "Blue", "Yellow"];
+console.log("\nMy favorite colors:");
+for (let i = 0; i < colors.length; i++) {
+    console.log("- " + colors[i]);
+}</textarea>
+                    <div class="output-area">
+                        <div class="output-label">Output:</div>
+                        <div id="output1" class="output-content"></div>
+                    </div>
+                </div>
+
+                <p><strong>Try this:</strong> Create a loop that displays only even numbers from 2 to 20! (Hint: use <code class="inline-code">i += 2</code>)</p>
+
+                <div style="margin-top: 30px; display: flex; justify-content: space-between;">
+                    <a href="conditionals.html" class="btn">← Previous Lesson</a>
+                    <a href="booleans.html" class="btn">Next Lesson: Boolean Logic →</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

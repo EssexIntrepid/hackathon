@@ -1,6 +1,6 @@
 // script.js - Main JavaScript for LearnJavaScript platform
 
-// ===== Theme Toggle =====
+// Theme Toggle 
 const themeToggle = document.getElementById('themeToggle');
 
 function setTheme(isDark) {
@@ -32,7 +32,7 @@ if (savedTheme === 'dark') {
     setTheme(true);
 }
 
-// ===== Mobile Sidebar Toggle =====
+// Mobile Sidebar Toggle 
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const sidebar = document.querySelector('.sidebar');
 
@@ -52,7 +52,7 @@ if (mobileMenuBtn && sidebar) {
     });
 }
 
-// ===== Code Runner Functionality =====
+// Code Runner Functionality 
 function runCode(editorId, outputId) {
     const editor = document.getElementById(editorId);
     const output = document.getElementById(outputId);
@@ -87,24 +87,21 @@ function runCode(editorId, outputId) {
             output.innerHTML = consoleOutput.join('\\n');
         }
         
-        // If there's a return value and no console output, show the result
         if (result !== undefined && consoleOutput.length === 0) {
             output.innerHTML = String(result);
         }
         
-        // If nothing was output, show a success message
         if (output.innerHTML === '') {
             output.innerHTML = '✓ Code executed successfully (no output)';
         }
     } catch (error) {
         output.innerHTML = 'Error: ' + error.message;
     } finally {
-        // Restore original console.log
         console.log = originalConsoleLog;
     }
 }
 
-// ===== Set Active Navigation Link =====
+// Set Active Navigation Link 
 function setActiveNavLink() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('.nav-links a');
@@ -119,12 +116,11 @@ function setActiveNavLink() {
     });
 }
 
-// Run when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     setActiveNavLink();
 });
 
-// ===== Smooth Scroll for Anchor Links =====
+// Smooth Scroll for Anchor Links 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         const targetId = this.getAttribute('href');
